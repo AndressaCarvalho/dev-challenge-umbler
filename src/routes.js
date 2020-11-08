@@ -1,7 +1,7 @@
-const express                 	= require('express');
-const routes 					= express.Router();
-const convertNumeralToRoman   	= require('./controllers/numeralToRoman');
-const convertRomanToNumeral   	= require('./controllers/romanToNumeral');
+import express from 'express';
+const routes = express.Router();
+import convertNumeralToRoman from './controllers/numeralToRoman.js';
+import convertRomanToNumeral from './controllers/romanToNumeral.js';
 
 
 routes.get('/', function(req, res) {
@@ -26,5 +26,4 @@ routes.post('/romanToNumeral', function(req, res) {
     console.log('Resultado: ' + finalValue);
 });
 
-
-module.exports = routes;
+export default routes;

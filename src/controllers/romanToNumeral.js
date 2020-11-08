@@ -59,4 +59,4 @@ let convertRomanToNumeral = function(roman) {
     return y;
 }
 
-module.exports = convertRomanToNumeral;
+export default convertRomanToNumeral;

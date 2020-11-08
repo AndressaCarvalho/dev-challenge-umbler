@@ -1,13 +1,13 @@
-const express                 = require('express');
-const hostname                = '127.0.0.1';
-const port                    = 3000;
-const app                     = express();
-const handlebars              = require('express-handlebars');
-const bodyParser              = require('body-parser');
-const readline                = require('readline');
-const convertNumeralToRoman   = require('./controllers/numeralToRoman');
-const convertRomanToNumeral   = require('./controllers/romanToNumeral');
-const routes                  = require('./routes');
+import express from 'express';
+const hostname = '127.0.0.1';
+const port     = 3000;
+const app      = express();
+import handlebars from 'express-handlebars';
+import bodyParser from 'body-parser';
+import readline from 'readline';
+import convertNumeralToRoman from './controllers/numeralToRoman.js';
+import convertRomanToNumeral from './controllers/romanToNumeral.js';
+import routes from './routes.js';
 
 
 
