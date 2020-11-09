@@ -48,7 +48,7 @@ reader.question('Informe um número decimal ou romano a ser convertido: \n', fun
             finalValue              = convertNumeralToRoman(answer);
             message                 = '\nResultado: ' + finalValue + '\n';
         } else {
-            finalValue              = convertRomanToNumeral(answer);
+            finalValue              = convertRomanToNumeral(answer.toUpperCase());
             message                 = '\nResultado: ' + finalValue + '\n';
         }
     }
