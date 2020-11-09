@@ -18,24 +18,26 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um converso
 
 .src/app.js -> Encarregado da criação do servidor HTTP, da interação com o usuário via terminal, e da apresentação de resultados.
 
-.tests/conversion.test.js -> Utilizado para testes de conversões, a partir do Node.js Assert.
+.__tests__/conversion.test.js -> Utilizado para testes de conversões, e desenvolvido a partir do Jest.
 
 
 
 # Execução da Aplicação
 Terminal (via npm):
-É preciso que o comando "npm start" seja executado.
+É preciso que o comando "npm run dev" seja executado na raíz do projeto.
 
 
 HTTP:
 O servidor é executado em "http://127.0.0.1:3000".
+--> Rotas:
+  http://127.0.0.1:3000/ -> Para conversão de números decimais em romanos.
+  http://127.0.0.1:3000/roman-numeral -> Para conversão de números romanos em decimais.
 
 
 
 # Execução de Testes
-Terminal:
-
-.tests>node conversion.test.js
+Terminal (via npm):
+Basta executar o comando "npm test" na raíz do projeto.
 
 
 
@@ -52,7 +54,9 @@ Creating a package.json file (https://docs.npmjs.com/creating-a-package-json-fil
 
 Criação de arquivo .gitignore (https://www.toptal.com/developers/gitignore).
 
-Simples assert() com Node.js (http://devfuria.com.br/nodejs/old/simples-assert-com-nodejs/).
+Testes no NodeJS aplicando TDD com Jest | Diego Fernandes (https://www.youtube.com/watch?v=2G_mWfG0DZE).
+
+Using ES6 import and export statements for Jest testing in Node.js (https://medium.com/@saplos123456/using-es6-import-and-export-statements-for-jest-testing-in-node-js-b20c8bd9041c).
 
 
 Obs.: Este desafio foi produzido a partir das orientações do Kata (http://codingdojo.org/kata/RomanNumerals/).
