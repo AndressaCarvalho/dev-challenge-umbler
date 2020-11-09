@@ -18,7 +18,7 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um converso
 
 ./src/app.js -> Encarregado da criação do servidor HTTP, da interação com o usuário via terminal, e da apresentação de resultados.
 
-./__tests__/conversion.test.js -> Utilizado para testes de conversões, e desenvolvido a partir do Jest.
+./__ tests __/conversion.test.js -> Utilizado para testes de conversões, e desenvolvido a partir do Jest.
 
 
 
