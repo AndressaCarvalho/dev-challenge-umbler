@@ -35,7 +35,7 @@ O servidor é executado em "http://127.0.0.1:3000".
 # Execução de Testes
 Terminal:
 
-.tests/conversion.test.js>node conversion.test.js
+.tests>node conversion.test.js
 
 
 
