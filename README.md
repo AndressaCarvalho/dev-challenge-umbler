@@ -23,8 +23,15 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um converso
 
 
 # Execução da Aplicação
-Terminal (via npm):
+Terminal:
+
+--> Via npm
+
 É preciso que o comando "npm run dev" seja executado na raíz do projeto.
+
+--> Via yarn
+
+O comando "yarn dev" deve ser executado na raíz do projeto.
 
 
 HTTP:
@@ -39,8 +46,15 @@ O servidor é executado em "http://127.0.0.1:3000".
 
 
 # Execução de Testes
-Terminal (via npm):
+Terminal:
+
+--> Via npm
+
 Basta executar o comando "npm test" na raíz do projeto.
+
+--> Via yarn
+
+Na raíz do projeto, o comando "yarn test" deve ser executado.
 
 
 
