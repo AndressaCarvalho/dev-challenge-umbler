@@ -1,14 +1,14 @@
 const convertRomanToNumeral = (roman) => {
 	let arrayRoman;
- 	let dRoman         = 0;
- 	let digitR         = 0;
+ 	let dRoman = 0;
+ 	let digitR = 0;
 
     if (roman == '' || !isNaN(roman)) {
         return 0;
     }
 
 
-    arrayRoman         = roman.split('');
+    arrayRoman = roman.split('');
 
  	for (let i = 0; i < arrayRoman.length; i++) {
  	    let dr = roman.charAt(i);
@@ -30,7 +30,7 @@ const convertRomanToNumeral = (roman) => {
         }
     }
  	
- 	let y = 0;
+ 	let n = 0;
 
     for (let i = 0; i < arrayRoman.length; i++) {
     	let dr = roman.charAt(i);
@@ -52,11 +52,12 @@ const convertRomanToNumeral = (roman) => {
            digitR += 900;
         }
     }
-    y += dRoman + digitR;
-    if (y > 3000) {
+    
+    n += dRoman + digitR;
+    if (n > 3000) {
         return 0;
     }
-    return y;
+    return n;
 }
 
 export default convertRomanToNumeral;

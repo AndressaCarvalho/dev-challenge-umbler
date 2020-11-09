@@ -8,11 +8,11 @@ import path, { dirname } from 'path';
 import convertNumeralToRoman from './services/numeralToRoman.js';
 import convertRomanToNumeral from './services/romanToNumeral.js';
 
-const __filename    = fileURLToPath(import.meta.url);
-const __dirname     = dirname(__filename);
-const hostname      = '127.0.0.1';
-const port          = 3000;
-const app           = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const hostname = '127.0.0.1';
+const port = 3000;
+const app = express();
 
 
 
@@ -32,24 +32,24 @@ app.listen(port, hostname);
 
 
 // Terminal
-let reader = readline.createInterface({
+const reader = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-reader.question('Informe um número decimal ou romano a ser convertido: \n', function(answer) {
-    let finalValue  = 0;
-    let message     = '';
+reader.question('Informe um número decimal ou romano a ser convertido: \n', (answer) => {
+    let finalValue = 0;
+    let message = '';
 
     if (Number(answer) <= 0 || Number(answer) > 3000) {
-        message                     = 'O valor informado é inválido!' + '\n';
+        message = 'O valor informado é inválido!' + '\n';
     } else {
         if (!isNaN(Number(answer))) {
-            finalValue              = convertNumeralToRoman(answer);
-            message                 = '\nResultado: ' + finalValue + '\n';
+            finalValue = convertNumeralToRoman(answer);
+            message = '\nResultado: ' + finalValue + '\n';
         } else {
-            finalValue              = convertRomanToNumeral(answer.toUpperCase());
-            message                 = '\nResultado: ' + finalValue + '\n';
+            finalValue = convertRomanToNumeral(answer.toUpperCase());
+            message = '\nResultado: ' + finalValue + '\n';
         }
     }
 
