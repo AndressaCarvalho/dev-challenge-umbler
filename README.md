@@ -24,7 +24,6 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um converso
 
 # Execução da Aplicação
 Terminal (via npm):
-
 É preciso que o comando "npm start" seja executado.
 
 
@@ -56,4 +55,4 @@ Criação de arquivo .gitignore (https://www.toptal.com/developers/gitignore).
 Simples assert() com Node.js (http://devfuria.com.br/nodejs/old/simples-assert-com-nodejs/).
 
 
-Este desafio foi produzido a partir das orientações do Kata (http://codingdojo.org/kata/RomanNumerals/).
+Obs.: Este desafio foi produzido a partir das orientações do Kata (http://codingdojo.org/kata/RomanNumerals/).
