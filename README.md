@@ -54,7 +54,7 @@ Basta executar o comando "npm test" na raíz do projeto.
 
 --> Via yarn
 
-Na raíz do projeto, o comando "yarn test" deve ser executado.
+Na raíz do projeto, o comando "yarn test" se encarrega da execução.
 
 
 
