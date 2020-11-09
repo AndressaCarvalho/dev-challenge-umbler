@@ -1,6 +1,11 @@
-let convertNumeralToRoman = function(numeral) {
+const convertNumeralToRoman = (numeral) => {
     let n = numeral;
     let y = '';
+
+    if (n <= 0 || n > 3000) {
+        return 0;
+    }
+
 
     while ((n / 1000) >= 1) {
         y += 'M';

@@ -1,17 +1,23 @@
 import express from 'express';
-const hostname = '127.0.0.1';
-const port     = 3000;
-const app      = express();
 import handlebars from 'express-handlebars';
 import bodyParser from 'body-parser';
 import readline from 'readline';
-import convertNumeralToRoman from './controllers/numeralToRoman.js';
-import convertRomanToNumeral from './controllers/romanToNumeral.js';
 import routes from './routes.js';
+import { fileURLToPath } from 'url';
+import path, { dirname } from 'path';
+import convertNumeralToRoman from './services/numeralToRoman.js';
+import convertRomanToNumeral from './services/romanToNumeral.js';
+
+const __filename    = fileURLToPath(import.meta.url);
+const __dirname     = dirname(__filename);
+const hostname      = '127.0.0.1';
+const port          = 3000;
+const app           = express();
 
 
 
 // HTTP
+app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 

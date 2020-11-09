@@ -1,7 +1,14 @@
-let convertRomanToNumeral = function(roman) {
-	let arrayRoman = roman.split('');
- 	let dRoman = 0;
- 	let digitR = 0;
+const convertRomanToNumeral = (roman) => {
+	let arrayRoman;
+ 	let dRoman         = 0;
+ 	let digitR         = 0;
+
+    if (roman == '' || !isNaN(roman)) {
+        return 0;
+    }
+
+
+    arrayRoman         = roman.split('');
 
  	for (let i = 0; i < arrayRoman.length; i++) {
  	    let dr = roman.charAt(i);
@@ -31,31 +38,24 @@ let convertRomanToNumeral = function(roman) {
 
         if (dr == 'I' && drNext == 'V') {
             digitR += 4;
-        } else
-
-        if (dr == 'I' && drNext == 'X') {
+        } else if (dr == 'I' && drNext == 'X') {
             digitR += 9;
         }
-        else
-
-        if (dr == 'X' && drNext == 'L') {
+        else if (dr == 'X' && drNext == 'L') {
             digitR += 50;
-        } else 
-
-        if (dr == 'X' && drNext == 'C') {
+        } else if (dr == 'X' && drNext == 'C') {
             digitR += 90;
 
-        } else 
-
-        if (dr == 'C' && drNext == 'D') {
+        } else if (dr == 'C' && drNext == 'D') {
             digitR += 400;
-        } else 
-
-        if (dr == 'C' && drNext == 'M') {
+        } else if (dr == 'C' && drNext == 'M') {
            digitR += 900;
         }
     }
     y += dRoman + digitR;
+    if (y > 3000) {
+        return 0;
+    }
     return y;
 }
 
