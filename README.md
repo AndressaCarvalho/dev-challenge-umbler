@@ -8,7 +8,7 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um converso
 
 ./src/services/romanToNumeral.js -> Contém a lógica responsável pela conversão de números romanos em decimais.
 
-./src/controllers/ConversionController.js -> Classe responsável pela apresentação de views e de resultados de conversões via operação $_POST.
+./src/controllers/ConversionController.js -> Classe responsável pela apresentação de views e de resultados de conversões.
 
 ./src/routes.js -> Possui as rotas da aplicação.
 
