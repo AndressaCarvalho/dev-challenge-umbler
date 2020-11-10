@@ -5,10 +5,10 @@ const routes = express.Router();
 
 
 routes.get('/', ConversionController.numeralToRomanView);
-routes.post('/numeralToRoman', ConversionController.numeralToRoman);
+routes.get('/numeralToRoman', ConversionController.numeralToRoman);
 
 routes.get('/roman-numeral', ConversionController.romanToNumeralView);
-routes.post('/romanToNumeral', ConversionController.romanToNumeral);
+routes.get('/romanToNumeral', ConversionController.romanToNumeral);
 
 
 export default routes;

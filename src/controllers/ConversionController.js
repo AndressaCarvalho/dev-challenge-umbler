@@ -7,7 +7,7 @@ class ConversionController {
     }
 
     numeralToRoman(req, res) {
-        const finalValue = convertNumeralToRoman(req.body.numeral);
+        const finalValue = convertNumeralToRoman(req.query.numeral);
 
         res.send(`Resultado: ${finalValue}`);
         console.log(`Resultado: ${finalValue}`);
@@ -18,7 +18,7 @@ class ConversionController {
     }
 
     romanToNumeral(req, res) {
-        const finalValue = convertRomanToNumeral(req.body.roman.toUpperCase());
+        const finalValue = convertRomanToNumeral(req.query.roman.toUpperCase());
 
         res.send(`Resultado: ${finalValue}`);
         console.log(`Resultado: ${finalValue}`);
