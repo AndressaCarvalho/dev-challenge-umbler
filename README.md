@@ -27,7 +27,7 @@ Terminal:
 
 --> Via npm
 
-É preciso que o comando "npm run dev" seja executado na raíz do projeto.
+É preciso que os comandos "npm install", seguido de "npm run dev", sejam executados na raíz do projeto.
 
 --> Via yarn
 
