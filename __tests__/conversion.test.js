@@ -36,6 +36,12 @@ describe('Conversion from roman to numeral', () => {
         expect(conversion).toBe(1020);
     });
 
+    it('Should return 0 when it receives an invalid string as parameter', () => {
+        conversion = convertRomanToNumeral('TEXT');
+
+        expect(conversion).toBe(0);
+    });
+
     it('Should return 0 when it receives an empty string as parameter', () => {
         conversion = convertRomanToNumeral('');
 

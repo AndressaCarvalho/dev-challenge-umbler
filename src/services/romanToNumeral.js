@@ -7,8 +7,23 @@ const convertRomanToNumeral = (roman) => {
         return 0;
     }
 
-
     arrayRoman = roman.split('');
+
+
+    let auxValidDigits = 0;
+    let arrayValidDigits = ['M', 'C', 'D', 'X', 'L', 'V', 'I'];
+    for (let i = 0; i < arrayRoman.length; i++) {
+        for (let y = 0; y < arrayValidDigits.length; y++) {
+            if (roman.charAt(i) == arrayValidDigits[y]) {
+                auxValidDigits = 1;
+            } 
+        }
+
+        if (auxValidDigits == 0) {
+            return 0;
+            break;
+        }
+    }
 
  	for (let i = 0; i < arrayRoman.length; i++) {
  	    let dr = roman.charAt(i);
