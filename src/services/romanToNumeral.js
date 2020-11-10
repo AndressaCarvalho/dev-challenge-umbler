@@ -1,7 +1,9 @@
 const convertRomanToNumeral = (roman) => {
 	let arrayRoman;
+    let arrayValidDigits;
  	let dRoman = 0;
  	let digitR = 0;
+    let auxValidDigits = 0;
 
     if (roman == '' || !isNaN(roman)) {
         return 0;
@@ -10,8 +12,7 @@ const convertRomanToNumeral = (roman) => {
     arrayRoman = roman.split('');
 
 
-    let auxValidDigits = 0;
-    let arrayValidDigits = ['M', 'C', 'D', 'X', 'L', 'V', 'I'];
+    arrayValidDigits = ['M', 'C', 'D', 'X', 'L', 'V', 'I'];
     for (let i = 0; i < arrayRoman.length; i++) {
         for (let y = 0; y < arrayValidDigits.length; y++) {
             if (roman.charAt(i) == arrayValidDigits[y]) {
