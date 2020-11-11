@@ -27,7 +27,8 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um converso
 
   - Via npm
 
-    - É preciso que os comandos "npm install", seguido de "npm run dev", sejam executados na raíz do projeto.
+    - ```npm install``` 
+    - ```npm run dev```
 
   - Via yarn
 
@@ -50,30 +51,30 @@ Terminal:
 
   - Via npm
 
-    - Basta executar o comando "npm test" na raíz do projeto.
+    - ```npm test```
 
   - Via yarn
 
-    - Na raíz do projeto, o comando "yarn test" se encarrega da execução.
+    - ```yarn test```
 
 
 
 ## Referências
-[Node.js Documentation] (https://nodejs.org/en/docs/).
+Node.js Documentation (https://nodejs.org/en/docs/).
 
-[Node.js #1 - O que é Node e como instalar o Node.js no Windows] (https://www.youtube.com/watch?v=jqrKQEJ6DpY&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu).
+Node.js #1 - O que é Node e como instalar o Node.js no Windows (https://www.youtube.com/watch?v=jqrKQEJ6DpY&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu).
 
-[Express] (https://expressjs.com/pt-br/).
+Express (https://expressjs.com/pt-br/).
 
-[Subindo servidor com Express] (https://medium.com/@febatista107/subindo-servidor-com-express-a1868795e366).
+Subindo servidor com Express (https://medium.com/@febatista107/subindo-servidor-com-express-a1868795e366).
 
-[Creating a package.json file] (https://docs.npmjs.com/creating-a-package-json-file).
+Creating a package.json file (https://docs.npmjs.com/creating-a-package-json-file).
 
-[Criação de arquivo .gitignore] (https://www.toptal.com/developers/gitignore).
+Criação de arquivo .gitignore (https://www.toptal.com/developers/gitignore).
 
-[Testes no NodeJS aplicando TDD com Jest | Diego Fernandes] (https://www.youtube.com/watch?v=2G_mWfG0DZE).
+Testes no NodeJS aplicando TDD com Jest | Diego Fernandes (https://www.youtube.com/watch?v=2G_mWfG0DZE).
 
-[Using ES6 import and export statements for Jest testing in Node.js] (https://medium.com/@saplos123456/using-es6-import-and-export-statements-for-jest-testing-in-node-js-b20c8bd9041c).
+Using ES6 import and export statements for Jest testing in Node.js (https://medium.com/@saplos123456/using-es6-import-and-export-statements-for-jest-testing-in-node-js-b20c8bd9041c).
 
 
-Obs.: Este desafio foi produzido a partir das orientações do [Kata] (http://codingdojo.org/kata/RomanNumerals/).
+Obs.: Este desafio foi produzido a partir das orientações do Kata (http://codingdojo.org/kata/RomanNumerals/).
