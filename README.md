@@ -4,21 +4,21 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um converso
 
 
 ## Estrutura
-'./src/services/numeralToRoman.js' -> Contém a lógica responsável pela conversão de números decimais em romanos.
+> ./src/services/numeralToRoman.js -> Contém a lógica responsável pela conversão de números decimais em romanos.
 
-'./src/services/romanToNumeral.js' -> Contém a lógica responsável pela conversão de números romanos em decimais.
+> ./src/services/romanToNumeral.js -> Contém a lógica responsável pela conversão de números romanos em decimais.
 
-'./src/controllers/ConversionController.js' -> Classe responsável pela apresentação de views e de resultados de conversões.
+> ./src/controllers/ConversionController.js -> Classe responsável pela apresentação de views e de resultados de conversões.
 
-'./src/routes.js' -> Possui as rotas da aplicação.
+> ./src/routes.js -> Possui as rotas da aplicação.
 
-'./src/views/numeralToRoman.handlebars' -> View contendo um formulário que recebe números decimais a serem convertidos em romanos.
+> ./src/views/numeralToRoman.handlebars -> View contendo um formulário que recebe números decimais a serem convertidos em romanos.
 
-'./src/views/romanToNumeral.handlebars' -> View contendo um formulário que recebe números romanos a serem convertidos em decimais.
+> ./src/views/romanToNumeral.handlebars -> View contendo um formulário que recebe números romanos a serem convertidos em decimais.
 
-'./src/app.js' -> Encarregado da criação do servidor HTTP, da interação com o usuário via terminal, e da apresentação de resultados.
+> ./src/app.js -> Encarregado da criação do servidor HTTP, da interação com o usuário via terminal, e da apresentação de resultados.
 
-'./__ tests __/conversion.test.js' -> Utilizado para testes de conversões, e desenvolvido a partir do Jest.
+> ./__ tests __/conversion.test.js -> Utilizado para testes de conversões, e desenvolvido a partir do Jest.
 
 
 
