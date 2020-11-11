@@ -31,7 +31,7 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um converso
 
   - Via yarn
 
-    - ´´´yarn dev´´´
+    - ```yarn dev```
 
 
 2. HTTP:
