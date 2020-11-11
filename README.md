@@ -36,7 +36,8 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um converso
 
 
 2. HTTP:
-O servidor é executado em "http://127.0.0.1:3000".
+
+  - O servidor é executado em "http://127.0.0.1:3000".
 
   - Rotas:
 
