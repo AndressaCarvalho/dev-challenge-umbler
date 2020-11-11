@@ -31,7 +31,7 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um converso
 
   - Via yarn
 
-    - O comando "yarn dev" deve ser executado na raíz do projeto.
+    - ´´´yarn dev´´´
 
 
 2. HTTP:
