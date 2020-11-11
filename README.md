@@ -31,7 +31,8 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um converso
     - ```npm run dev```
 
   - Via yarn
-
+    
+    - ```yarn install``
     - ```yarn dev```
 
 
