@@ -3,77 +3,77 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um converso
 
 
 
-# Estrutura
-./src/services/numeralToRoman.js -> Contém a lógica responsável pela conversão de números decimais em romanos.
+## Estrutura
+'./src/services/numeralToRoman.js' -> Contém a lógica responsável pela conversão de números decimais em romanos.
 
-./src/services/romanToNumeral.js -> Contém a lógica responsável pela conversão de números romanos em decimais.
+'./src/services/romanToNumeral.js' -> Contém a lógica responsável pela conversão de números romanos em decimais.
 
-./src/controllers/ConversionController.js -> Classe responsável pela apresentação de views e de resultados de conversões.
+'./src/controllers/ConversionController.js' -> Classe responsável pela apresentação de views e de resultados de conversões.
 
-./src/routes.js -> Possui as rotas da aplicação.
+'./src/routes.js' -> Possui as rotas da aplicação.
 
-./src/views/numeralToRoman.handlebars -> View contendo um formulário que recebe números decimais a serem convertidos em romanos.
+'./src/views/numeralToRoman.handlebars' -> View contendo um formulário que recebe números decimais a serem convertidos em romanos.
 
-./src/views/romanToNumeral.handlebars -> View contendo um formulário que recebe números romanos a serem convertidos em decimais.
+'./src/views/romanToNumeral.handlebars' -> View contendo um formulário que recebe números romanos a serem convertidos em decimais.
 
-./src/app.js -> Encarregado da criação do servidor HTTP, da interação com o usuário via terminal, e da apresentação de resultados.
+'./src/app.js' -> Encarregado da criação do servidor HTTP, da interação com o usuário via terminal, e da apresentação de resultados.
 
-./__ tests __/conversion.test.js -> Utilizado para testes de conversões, e desenvolvido a partir do Jest.
-
-
-
-# Execução da Aplicação
-Terminal:
-
---> Via npm
-
-É preciso que os comandos "npm install", seguido de "npm run dev", sejam executados na raíz do projeto.
-
---> Via yarn
-
-O comando "yarn dev" deve ser executado na raíz do projeto.
+'./__ tests __/conversion.test.js' -> Utilizado para testes de conversões, e desenvolvido a partir do Jest.
 
 
-HTTP:
+
+## Execução da Aplicação
+1. Terminal:
+
+  - Via npm
+
+    - É preciso que os comandos "npm install", seguido de "npm run dev", sejam executados na raíz do projeto.
+
+  - Via yarn
+
+    - O comando "yarn dev" deve ser executado na raíz do projeto.
+
+
+2. HTTP:
 O servidor é executado em "http://127.0.0.1:3000".
 
---> Rotas:
+  - Rotas:
 
-  http://127.0.0.1:3000/ -> Para conversão de números decimais em romanos.
+    - http://127.0.0.1:3000/ -> Para conversão de números decimais em romanos.
   
-  http://127.0.0.1:3000/roman-numeral -> Para conversão de números romanos em decimais.
+    - http://127.0.0.1:3000/roman-numeral -> Para conversão de números romanos em decimais.
 
 
 
-# Execução de Testes
+## Execução de Testes
 Terminal:
 
---> Via npm
+  - Via npm
 
-Basta executar o comando "npm test" na raíz do projeto.
+    - Basta executar o comando "npm test" na raíz do projeto.
 
---> Via yarn
+  - Via yarn
 
-Na raíz do projeto, o comando "yarn test" se encarrega da execução.
-
-
-
-# Referências
-Node.js Documentation (https://nodejs.org/en/docs/).
-
-Node.js #1 - O que é Node e como instalar o Node.js no Windows (https://www.youtube.com/watch?v=jqrKQEJ6DpY&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu).
-
-Express (https://expressjs.com/pt-br/).
-
-Subindo servidor com Express (https://medium.com/@febatista107/subindo-servidor-com-express-a1868795e366).
-
-Creating a package.json file (https://docs.npmjs.com/creating-a-package-json-file).
-
-Criação de arquivo .gitignore (https://www.toptal.com/developers/gitignore).
-
-Testes no NodeJS aplicando TDD com Jest | Diego Fernandes (https://www.youtube.com/watch?v=2G_mWfG0DZE).
-
-Using ES6 import and export statements for Jest testing in Node.js (https://medium.com/@saplos123456/using-es6-import-and-export-statements-for-jest-testing-in-node-js-b20c8bd9041c).
+    - Na raíz do projeto, o comando "yarn test" se encarrega da execução.
 
 
-Obs.: Este desafio foi produzido a partir das orientações do Kata (http://codingdojo.org/kata/RomanNumerals/).
+
+## Referências
+[Node.js Documentation] (https://nodejs.org/en/docs/).
+
+[Node.js #1 - O que é Node e como instalar o Node.js no Windows] (https://www.youtube.com/watch?v=jqrKQEJ6DpY&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu).
+
+[Express] (https://expressjs.com/pt-br/).
+
+[Subindo servidor com Express] (https://medium.com/@febatista107/subindo-servidor-com-express-a1868795e366).
+
+[Creating a package.json file] (https://docs.npmjs.com/creating-a-package-json-file).
+
+[Criação de arquivo .gitignore] (https://www.toptal.com/developers/gitignore).
+
+[Testes no NodeJS aplicando TDD com Jest | Diego Fernandes] (https://www.youtube.com/watch?v=2G_mWfG0DZE).
+
+[Using ES6 import and export statements for Jest testing in Node.js] (https://medium.com/@saplos123456/using-es6-import-and-export-statements-for-jest-testing-in-node-js-b20c8bd9041c).
+
+
+Obs.: Este desafio foi produzido a partir das orientações do [Kata] (http://codingdojo.org/kata/RomanNumerals/).
