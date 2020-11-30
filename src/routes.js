@@ -1,14 +1,11 @@
 import express from 'express';
-import ConversionController from './controllers/ConversionController.js';
+import ControllerDomain from './controllers/DomainController.js';
 
 const routes = express.Router();
 
 
-routes.get('/', ConversionController.numeralToRomanView);
-routes.get('/numeralToRoman', ConversionController.numeralToRoman);
-
-routes.get('/roman-numeral', ConversionController.romanToNumeralView);
-routes.get('/romanToNumeral', ConversionController.romanToNumeral);
+routes.get('/', ControllerDomain.homeView)
+routes.get('/findDomain', ControllerDomain.findDomain)
 
 
 export default routes;

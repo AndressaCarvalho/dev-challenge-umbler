@@ -1,4 +1,4 @@
-# RomanNumerals
+# dev-challenge-umbler
 Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um conversor de números decimais em números romanos, e vice-versa (conversão realizada sobre números no intervalo de 1 à 3000).
 
 
