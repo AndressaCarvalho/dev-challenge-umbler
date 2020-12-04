@@ -3,22 +3,16 @@ let result;
 
 
 describe('Finding for a domain', () => {
-    it('The arrays should match when it receives \'umbler.com\' as parameter', () => {
+    it('The IP address should match with \'187.84.237.146\' when it receives \'umbler.com\' as parameter', () => {
         result = serviceDomain('umbler.com');
-        let arrayTest = ['umbler.com','177.55.66.99','ID: FEC276  Titular: RedeHost Internet Ltda.  Nome: Flávio Eduardo Cardoso','Locaweb'];
-        let auxTest = 1;
-        for (let i = 0; i < result.length; i++) {
-            if (arrayTest.charAt(i) != result[y]) {
-                auxTest = 0;
-            } 
-        }
+        let ipTest = '187.84.237.146';
 
-        expect(auxTest).toBe(1);
+        expect(result[1]).toBe(ipTest);
     });
 
     it('Should return 0 when it receives \'nonexistentdomain41890.com\' as parameter', () => {
         result = serviceDomain('nonexistentdomain41890.com');
-        let arrayTest = [0];
+        let arrayTest = [];
 
         expect(result).toBe(arrayTest);
     });

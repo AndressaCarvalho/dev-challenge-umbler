@@ -1,9 +1,9 @@
-import viewDomain from '../database/operations/Search.js';
+import api from '../services/api.js'; 
 
 const serviceDomain = (domain) => {
-    const view = viewDomain(domain)
+    const result = api(domain)
 
-    return view.then(console.log)
+    return result.then(console.log)
 }
 
 export default serviceDomain;
