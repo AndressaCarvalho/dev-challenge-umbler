@@ -1,4 +1,4 @@
-import viewDomain from '../database/operations/View.js';
+import viewDomain from '../database/operations/Search.js';
 
 const serviceDomain = (domain) => {
     const view = viewDomain(domain)

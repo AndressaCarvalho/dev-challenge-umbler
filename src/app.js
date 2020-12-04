@@ -32,6 +32,7 @@ const reader = readline.createInterface({
     output: process.stdout
 });
 
+
 reader.question('Informe um domínio: \n', (answer) => {
     serviceDomain(answer.toLowerCase())
     reader.close()

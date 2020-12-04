@@ -1,4 +1,5 @@
-import databaseDomain from '../DatabaseConnection.js'; 
+import api from '../../services/api.js'; 
+import databaseDomain from '../DatabaseConnection.js';
 
 const viewDomain = (domain) => {
     let arrayData = [0]
@@ -14,6 +15,8 @@ const viewDomain = (domain) => {
             connection.end()
             if (result != '') {
                 arrayData = [result[0].name, result[0].ip, result[0].whois, result[0].hostedat]
+            } else {
+                arrayData = api(domain)
             }
             // resolve('\nResultado: ' + arrayData)
             resolve(arrayData)
