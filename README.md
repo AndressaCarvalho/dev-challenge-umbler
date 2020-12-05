@@ -10,11 +10,7 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um meio par
 
 > ./src/database/DomainConnection.js -> Encarregado de estabelecer a conexão com o banco de dados.
 
-> ./src/database/operations/View.js -> Utilizado para buscas por informações de domínios.
-
-> ./src/database/operations/Add.js -> Empregado para inserção de dados relacionados a domínios.
-
-> ./src/services/DomainSerive.js -> Contém a lógica responsável pela manipulação de informações Whois.
+> ./src/services/api.js -> Contém a lógica responsável pela manipulação de informações de DNS.
 
 > ./src/controllers/DomainController.js -> Classe responsável pela apresentação de views e de resultados de buscas.
 
@@ -61,4 +57,4 @@ Terminal:
 
 
 
-Obs.: Este desafio foi produzido a partir das orientações Desafio Umbler (https://github.com/umbler-team/dev-challenge).
+Obs.: Este desafio foi produzido a partir das orientações do Desafio Umbler (https://github.com/umbler-team/dev-challenge).
