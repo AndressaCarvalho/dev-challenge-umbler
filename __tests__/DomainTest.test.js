@@ -1,19 +1,18 @@
-import serviceDomain from './services/DomainService.js';
-let result;
+import api from '../src/services/api.js';
+let response;
 
 
 describe('Finding for a domain', () => {
     it('The IP address should match with \'187.84.237.146\' when it receives \'umbler.com\' as parameter', () => {
-        result = serviceDomain('umbler.com');
-        let ipTest = '187.84.237.146';
+        response = api('umbler.com');
 
-        expect(result[1]).toBe(ipTest);
+        expect(JSON.stringify(response[1], null, "\t")).toBe('187.84.237.146');
     });
 
-    it('Should return 0 when it receives \'nonexistentdomain41890.com\' as parameter', () => {
-        result = serviceDomain('nonexistentdomain41890.com');
-        let arrayTest = [];
+    it('Should return a empty object when it receives \'udheojaaeofpashefispjfuehfuabfjeuf545gesiyfhd5448784876846878747.com\' as parameter', () => {
+        let stringTest = {};
+        response = api('udheojaaeofpashefispjfudheojaaeofpashefispjfuehfuabfjeuf545gesiyfhd5448784876846878746uehfuabfjeufgesiyfhd5448784876846878747.com');
 
-        expect(result).toBe(arrayTest);
+        expect(JSON.stringify(response, null, "\t")).toBe(JSON.stringify(stringTest, null, "\t"));
     });
 });

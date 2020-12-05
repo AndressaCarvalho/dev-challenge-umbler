@@ -1,15 +1,19 @@
-<form action="/findDomain" method="GET">
-    <input type="text" name="txt-search" id="txt-search" placeholder="Domínio" class="form-control" onkeypress="validateDomain();" onblur="validateDomain();"><br>
+<form action="/domain-view" method="GET">
+    <input type="text" name="txtsearch" id="txtsearch" placeholder="Domínio" class="form-control" onkeypresults="validateDomain();" onblur="validateDomain();"><br>
 
     <button type="submit" id="btn-search" class="btn btn-block btn-success" style="display: none;">Pesquisar...</button>
 </form>
 
+<pre>
+    {{{dataDomain}}}
+</pre>
+
 <script type="text/javascript">
     function validateDomain() {
-        let val = document.getElementById('txt-search').value
+        let valDomain = document.getElementById('txtsearch').value
 
-        let res = val.match(/^(?:https?:\/\/)?(w{3}\.)?[\w_-]+((\.\w{2,}){1,2})(\/([\w\._-]+\/?)*(\?[\w_-]+=[^\?\/&]*(\&[\w_-]+=[^\?\/&]*)*)?)?$/)
-        if (res) {
+        let resultValidate = valDomain.match(/^(?:https?:\/\/)?(w{3}\.)?[\w_-]+((\.\w{2,}){1,2})(\/([\w\._-]+\/?)*(\?[\w_-]+=[^\?\/&]*(\&[\w_-]+=[^\?\/&]*)*)?)?$/)
+        if (resultValidate) {
             document.getElementById('btn-search').style.display = 'block'
             return true
         }

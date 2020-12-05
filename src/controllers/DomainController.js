@@ -1,15 +1,23 @@
-import serviceDomain from '../services/DomainService.js';
+import api from '../services/api.js';
 
 class DomainController {
     homeView(req, res) {
-        res.render('home');
+        res.render('home')
     }
 
-    findDomain(req, res) {
-        const finalValue = serviceDomain(req.query.txt-search);
+    domainConsole(domain) {
+        const result = api(domain)
+        return result.then(console.log)
+    }
 
-        res.send(`Resultado: ${finalValue}`);
-        console.log(`Resultado: ${finalValue}`);
+    domainView(req, res) {
+        const response = api(req.query.txtsearch)
+
+        response.then(function(result) {
+            res.render('home', {
+                dataDomain: JSON.stringify(result, null, "\t")
+            })
+        })
     }
 }
 

@@ -3,12 +3,16 @@ import dns from 'dns';
 import databaseDomain from '../database/DatabaseConnection.js';
 
 async function apiDomain (domain) {
-    let domainResult = await selectDomain(domain)
+    let domainResult = []
+    let domainResultFind = []
+    
+    domainResult = await selectDomain(domain)
 
     if (domainResult == '') { 
-        // let domainResultFind = await findDomain(domain)
-        // domainResult = await addDomain(domainResultFind)
-        domainResult = await findDomain(domain)
+        domainResultFind = await findDomain(domain)
+        if (domainResultFind != '') {
+            domainResult = await addDomain(domainResultFind)
+        }
     }
 
     return domainResult
@@ -42,24 +46,48 @@ async function findDomain (domain) {
     let ipAddress = 0
 
     let resultsWhois = await whois(domain)
-    whoisResult = JSON.stringify(resultsWhois, null, 2)
+    if (resultsWhois.domainName) {
+        whoisResult = JSON.stringify(resultsWhois, null, 2)
 
-    ipAddress = await lookupPromise(domain)
-
-    if (whoisResult != '' && ipAddress != '') {
-        arrayResult = [whoisResult, ipAddress]
+        ipAddress = await lookupPromise(domain)
+        if (ipAddress != '') {
+            arrayResult = [domain, ipAddress, whoisResult]
+        }
     }
+    
+
     return arrayResult
 }
 
 
+async function addDomain (arrayDomain) {
+    const connection = databaseDomain()
+
+    return new Promise((resolve, reject) => {
+        const sql = 'INSERT INTO domains (name, ip, whois) VALUES (?)'
+        connection.query(sql, [arrayDomain], function (error, result) {
+            if (error) {
+                console.log(error)
+                reject(error)
+            }
+            connection.end()
+            resolve(arrayDomain)
+        });
+    });
+}
+
+
 async function lookupPromise (domain) {
+    let address = ''
+
     return new Promise((resolve, reject) => {
         dns.lookup(domain, (err, address, family) => {
-            if(err) reject(err);
-            resolve(address);
+            if(err) reject('error')
+            resolve(address)
         });
    });
 }
+
+
 
 export default apiDomain;

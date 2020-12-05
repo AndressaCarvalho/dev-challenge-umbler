@@ -5,7 +5,7 @@ import readline from 'readline';
 import routes from './routes.js';
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
-import serviceDomain from './services/DomainService.js';
+import controllerDomain from './controllers/DomainController.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -34,6 +34,11 @@ const reader = readline.createInterface({
 
 
 reader.question('Informe um domínio: \n', (answer) => {
-    serviceDomain(answer.toLowerCase())
+    const resultValidate = answer.match(/^(?:https?:\/\/)?(w{3}\.)?[\w_-]+((\.\w{2,}){1,2})(\/([\w\._-]+\/?)*(\?[\w_-]+=[^\?\/&]*(\&[\w_-]+=[^\?\/&]*)*)?)?$/)
+    if (resultValidate) {
+        controllerDomain.domainConsole(answer.toLowerCase())
+    } else {
+        console.log('\nDomínio inválido!')
+    }
     reader.close()
 });

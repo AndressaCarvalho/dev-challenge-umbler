@@ -1,11 +1,11 @@
 import express from 'express';
-import ControllerDomain from './controllers/DomainController.js';
+import controllerDomain from './controllers/DomainController.js';
 
 const routes = express.Router();
 
 
-routes.get('/', ControllerDomain.homeView)
-routes.get('/findDomain', ControllerDomain.findDomain)
+routes.get('/', controllerDomain.homeView)
+routes.get('/domain-view', controllerDomain.domainView)
 
 
 export default routes;
