@@ -10,9 +10,9 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um meio par
 
 > ./src/database/DomainConnection.js -> Utilizado para estabelecer a conexão com o banco de dados.
 
-> ./src/database/DomainSelect.js -> Encarregado de selecionar dados de DNS armazenados no banco.
+> ./src/database/operations/DomainSelect.js -> Encarregado de selecionar dados de DNS armazenados no banco.
 
-> ./src/database/DomainAdd.js -> Encarregado de adicionar dados de DNS no banco.
+> ./src/database/operations/DomainAdd.js -> Encarregado de adicionar dados de DNS no banco.
 
 > ./src/services/DomainService.js -> Contém a lógica responsável pela manipulação de informações de DNS.
 
@@ -41,6 +41,9 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um meio par
 2. HTTP:
 
   - O servidor é executado em "http://127.0.0.1:3000".
+  
+  
+**Obs.: Em ./src/database/dump/db-challenge.sql existe o dump do banco de dados**
 
 
 
