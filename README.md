@@ -8,9 +8,13 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um meio par
 
 > ./src/routes.js -> Possui as rotas da aplicação.
 
-> ./src/database/DomainConnection.js -> Encarregado de estabelecer a conexão com o banco de dados.
+> ./src/database/DomainConnection.js -> Utilizado para estabelecer a conexão com o banco de dados.
 
-> ./src/services/api.js -> Contém a lógica responsável pela manipulação de informações de DNS.
+> ./src/database/DomainSelect.js -> Encarregado de selecionar dados de DNS armazenados no banco.
+
+> ./src/database/DomainAdd.js -> Encarregado de adicionar dados de DNS no banco.
+
+> ./src/services/DomainService.js -> Contém a lógica responsável pela manipulação de informações de DNS.
 
 > ./src/controllers/DomainController.js -> Classe responsável pela apresentação de views e de resultados de buscas.
 
