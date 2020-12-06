@@ -9,6 +9,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "handlebars": "^4.7.6",
+    "knex": "^0.21.12",
     "mysql": "^2.18.1",
     "whois-json": "^2.0.4"
   },

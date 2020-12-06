@@ -1,11 +1,14 @@
-import mysql from 'mysql';
+import knex from 'knex';
 
 function databaseDomain () {
-    const connection = mysql.createConnection({
-        host     : 'localhost',
-        user     : 'root',
-        password : '',
-        database : 'db-challenge'
+    const connection = knex({
+        client: 'mysql',
+        connection: {
+            host     : 'localhost',
+            user     : 'root',
+            password : '',
+            database : 'db-challenge'
+        }
     });
 
     return connection
