@@ -1,4 +1,4 @@
-import serviceDomain from '../services/DomainService.js';
+import domainService from '../services/DomainService.js';
 
 class DomainController {
     homeView(req, res) {
@@ -6,16 +6,16 @@ class DomainController {
     }
 
     domainConsole(domain) {
-        const result = serviceDomain.apiDomain(domain)
+        const result = domainService.serviceDomain(domain)
         return result.then(console.log)
     }
 
     domainView(req, res) {
-        const response = serviceDomain.apiDomain(req.query.txtsearch)
+        const response = domainService.serviceDomain(req.query.txtsearch)
 
         response.then(function(result) {
             res.render('home', {
-                dataDomain: '\n' + result[0] + '\n' + result[1] + '\n' + result[2]
+                dataDomain: '\nName: ' + result.Name + '\nIP: ' + result.IP + '\nWhois: ' + result.Whois + '\nHosted at: ' + result.HostedAt 
             })
         })
     }

@@ -4,27 +4,27 @@ import selectDomain from '../database/operations/DomainSelect.js';
 import addDomain from '../database/operations/DomainAdd.js';
 
 class DomainService {
-    async apiDomain (domain) {
-        let domainResult = []
-        let domainResultFind = []
+    async serviceDomain (domain) {
+        let domainResult = {}
+        let domainResultsFind = {}
         
         domainResult = await selectDomain(domain)
 
-        if (domainResult == '') { 
-            domainResultFind = await this.findDomain(domain)
-            if (domainResultFind != '') {
-                domainResult = await addDomain(domainResultFind)
+        if (domainResult == 0) { 
+            domainResultsFind = await this.findDomain(domain)
+            if (domainResultsFind != 0) {
+                domainResult = await addDomain(domainResultsFind)
             }
         }
-
-        return domainResult
+        
+        return JSON.parse(JSON.stringify(domainResult))
     }
 
 
     async findDomain (domain) {
-        let arrayResult = []
+        let results = {}
         let whoisResult = ''
-        let ipAddress = 0
+        let ipAddress = ''
 
         let resultsWhois = await whois(domain)
         if (resultsWhois.domainName) {
@@ -32,12 +32,14 @@ class DomainService {
 
             ipAddress = await this.lookupPromise(domain)
             if (ipAddress != '') {
-                arrayResult = [domain, ipAddress, whoisResult]
+                results = {Name : domain, IP : ipAddress, Whois : whoisResult, HostedAt : ''}
             }
+        } else {
+            results = 0
         }
         
 
-        return arrayResult
+        return results
     }
 
 

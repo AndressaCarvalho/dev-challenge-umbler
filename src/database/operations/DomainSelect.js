@@ -1,16 +1,18 @@
 import databaseDomain from '../DatabaseConnection.js';
 
 async function selectDomain (domain) {
-    let arrayResult = []
+    let results = {}
     const connection = databaseDomain()
 
     return new Promise((resolve, reject) => {
         connection.select('*').from('domains').where('name', domain).then(function(result){
             try {
                 if (result != '') {
-                    arrayResult = [result[0].name,  result[0].ip, result[0].whois, result[0].hostedat]
+                    results = {Name : result[0].name, IP : result[0].ip, Whois : result[0].whois, HostedAt : result[0].hostedat}
+                } else {
+                    results = 0
                 }
-                resolve(arrayResult) 
+                resolve(results) 
             } catch (error) {
                 console.log(error)
                 reject(error)
