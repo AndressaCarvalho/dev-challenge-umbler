@@ -58,7 +58,13 @@ Terminal:
 
 
 ## Referências
+Node.js driver for MySQL (https://www.npmjs.com/package/mysql)
 
+Library Knex.js (http://knexjs.org/)
+
+DNS Node.js (https://nodejs.org/dist./v0.8.2/docs/api/dns.html)
+
+Node.js whois-json's driver (https://www.npmjs.com/package/whois-json)
 
 
 Obs.: Este desafio foi produzido a partir das orientações do Desafio Umbler (https://github.com/umbler-team/dev-challenge).
