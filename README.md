@@ -43,7 +43,7 @@ Esta aplicação, desenvolvida em Node.js, tem por objetivo fornecer um meio par
   - O servidor é executado em "http://127.0.0.1:3000".
   
   
-**Obs.: Em ./src/database/dump/db-challenge.sql existe o dump do banco de dados**
+**Obs.: Em ./src/database/dump/db-challenge.sql existe o dump do banco de dados.**
 
 
 
